@@ -1,11 +1,11 @@
 {
   "name": "messenger-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple and light library to support API of Facebook's Messenger platform.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SzymonLisowiec/messenger-lib.git"
+    "url": "git+https://github.com/SzymonLisowiec/node-messenger-lib.git"
   },
   "keywords": [
     "facebook",
@@ -19,7 +19,7 @@
   "author": "Szymon Lisowiec",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SzymonLisowiec/messenger-lib/issues"
+    "url": "https://github.com/SzymonLisowiec/node-messenger-lib/issues"
   },
-  "homepage": "https://github.com/SzymonLisowiec/messenger-lib#readme"
+  "homepage": "https://github.com/SzymonLisowiec/node-messenger-lib#readme"
 }
