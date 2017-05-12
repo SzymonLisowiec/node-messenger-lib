@@ -1,6 +1,6 @@
 {
   "name": "messenger-lib",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple and light library to support API of Facebook's Messenger platform.",
   "main": "index.js",
   "repository": {
