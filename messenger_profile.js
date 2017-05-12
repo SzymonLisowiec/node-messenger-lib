@@ -165,7 +165,7 @@ module.exports = function MessengerProfile(core){
 		return false;
 	}
 	
-	self.domainsWhitelist = function(state, domains, callback){
+	self.whitelisted_domains = function(state, domains, callback){
 		
 		if(typeof state == 'boolean'){
 			if(state){

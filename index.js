@@ -217,10 +217,10 @@ module.exports = function(config){
 			Event.recipient = event.recipient.id;
 			Event.time = event.timestamp;
 			
-			if(event.referral.ref) Event.ad_id = event.referral.ref;
+			if(event.referral.ref) Event.ref = event.referral.ref;
 			if(event.referral.ad_id) Event.ad_id = event.referral.ad_id;
-			if(event.referral.source) Event.ad_id = event.referral.source;
-			if(event.referral.type) Event.ad_id = event.referral.type;
+			if(event.referral.source) Event.source = event.referral.source;
+			if(event.referral.type) Event.type = event.referral.type;
 			
 			return Event;
 		};
@@ -242,7 +242,7 @@ module.exports = function(config){
 			Message.send = function(){
 				
 				Message.recipients.forEach(function(recipient){
-					self.callMessagesAPI({
+					self.callAPI('/me/messages', 'post', {
 						
 						recipient: {
 							id: recipient
@@ -336,13 +336,6 @@ module.exports = function(config){
 				}
 				
 			});
-			
-			return true;
-		}
-		
-		self.callMessagesAPI = function(data){
-			
-			self.callAPI('/me/messages', 'post', data);
 			
 			return true;
 		}
