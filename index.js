@@ -10,7 +10,7 @@ module.exports = function(config){
 		const events = {
 			message: [],
 			message_delivered: [],
-			message_readed: [],
+			message_read: [],
 			postback: [],
 			quick_reply: [],
 			account_linking: [],
@@ -92,8 +92,8 @@ module.exports = function(config){
 								
 							}else if(messagingEvent.read){
 								
-								var event = new self.readedMessage(messagingEvent);
-								emitEvent('message_readed', event, pageID);
+								var event = new self.readMessage(messagingEvent);
+								emitEvent('message_read', event, pageID);
 								
 							}else if(messagingEvent.account_linking){
 								
@@ -170,7 +170,7 @@ module.exports = function(config){
 			return Event;
 		};
 		
-		self.readedMessage = function(event){
+		self.readMessage = function(event){
 			
 			const Event = this;
 			
